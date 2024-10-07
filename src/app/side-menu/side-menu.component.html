@@ -1,0 +1,8 @@
+<div *ngIf="product !== undefined" class="sideMenuContainer">
+<p>Name:{{product.name}}</p>
+<p>Price:{{product.price}}</p>
+<p>Category: {{product.category}}</p>
+<p>Description: {{product.description}}</p>
+<p>InStock:<p *ngIf="product.inStock">Yes</p><p *ngIf="!product.inStock">No</p>
+<p>Rating: {{product.rating}}</p>
+</div>

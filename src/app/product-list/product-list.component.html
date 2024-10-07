@@ -1,0 +1,23 @@
+<div class="table_component" role="region" tabindex="0">
+ <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>inStock</th>
+            <th>Select</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of getProduct()" class="ul_items" (click) ="onItemClick($event,i)">
+            <td>{{i.name}}</td>
+            <td><price [price]="i.price"></price></td>
+            <td>{{i.category}}</td>
+            <td *ngIf="i.inStock">Yes</td>
+            <td *ngIf="!i.inStock">No</td>
+            <td (click)="onCheckboxClick($event)"><input type="checkbox" id="i.id" /></td>
+        </tr>
+    </tbody>
+</table>
+</div>
