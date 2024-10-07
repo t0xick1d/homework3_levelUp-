@@ -24,12 +24,12 @@ export class AppComponent {
       this.activeItem = product;
       return;
     }
-    if (this.activeItem !== undefined && this.activeItem.id === product.id) {
+    if (this.activeItem.id === product.id) {
       this.activeSideMenu = !this.activeSideMenu;
       this.activeItem = undefined;
       return;
     }
-    if (this.activeItem !== undefined && this.activeItem.id !== product.id) {
+    if (this.activeItem.id !== product.id) {
       this.activeItem = product;
       return;
     }
